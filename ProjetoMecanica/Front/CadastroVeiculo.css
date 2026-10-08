@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    background-color: #222;
+    border-right: 4px solid #409b2d;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 15px;
+    z-index: 1000;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+}
+
+.img-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.lista-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.lista-menu li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.lista-menu li a:hover {
+    background-color: #409b2d;
+    color: #222;
+}
+
+.lista-menu li a:active {
+    background-color: #e63946;
+    color: white;
+}
+
+.lista-menu li a:focus-visible,
+.btn-sair:focus-visible {
+    outline: 2px solid #409b2d;
+    outline-offset: 2px;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 15px;
+    border-top: 1px solid #444;
+}
+
+.perfil-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.perfil-avatar2 {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.perfil-dados {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.perfil-nome {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.perfil-cargo {
+    color: #aaa;
+    font-size: 13px;
+}
+
+.btn-sair {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid #e63946;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-sair:hover {
+    background-color: #e63946;
+    color: white;
+}
+
+
+.conteudo form {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.titulo-cadastro {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.card label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.card input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.card input:focus {
+    border-color: #409b2d;
+}
+
+.btn-cadastro {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.btn-cadastrar {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background-color: #409b2d;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-cadastrar:hover {
+    background-color: #000;
+}
+
+
+
+@media screen and (max-width: 700px) {
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 4px solid #409b2d;
+        padding: 20px;
+    }
+
+    .nav-menu {
+        width: 100%;
+    }
+
+    .lista-menu {
+        gap: 5px;
+    }
+
+    .conteudo {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+}
